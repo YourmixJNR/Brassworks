@@ -30,10 +30,6 @@ section {
     margin-left: auto;
 }
 
-hr.divider {
-    background: var(--Dark-Gray);
-}
-
 /* Header section */
 
 header .bg-body-tertiary {
@@ -91,5 +87,31 @@ a.site-logo img {
     width: 400px; /* Set a fixed width for the image */
     pointer-events: auto; /* Enable pointer events for the image */
 }
-  
+
+/* Desktop links */
+
+.d-links .links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 30px;
+    padding: 10px;
+    border-top: 1px solid var(--Dark-Gray);
+    border-bottom: 1px solid var(--Dark-Gray);
+}
+
+.d-links .links li {
+    margin-right: 10px; /* Add desired spacing between list items */
+}
+
+.d-links .links li a {
+    display: block;
+    font-size: 20px;
+    color: var(--Dark-Gray);
+    text-decoration: none;
+}
+
+.d-links .links li a:visited {
+    font-weight: 700;
+}
 

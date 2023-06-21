@@ -53,4 +53,8 @@
         width: 300px; /* Set a fixed width for the image */
     }
 
+    .desktop-links {
+        display: none;
+    }
+
 }
