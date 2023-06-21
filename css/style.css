@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+    --Dark-Goldenrod: #b0842e;
+    --Dark-Gray: #767676;
+}
+
+/* Base style */
+
+* {
+    font-family: 'Abel', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+}
+
+body {
+    position: relative;
+	background: #f1f0ee; 
+	overflow: hidden;
+}
+
+/* Reuseable components */
+
+section {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+hr.divider {
+    background: var(--Dark-Gray);
+}
+
+/* Header section */
+
+header .bg-body-tertiary {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    background: var(--Dark-Goldenrod) !important;
+}
+
+.input-container { 
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-img {
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    left: 0;
+}
+
+.input-field { 
+    width: 70%;
+    height: 125%;
+    background: #fff;
+    padding-left: 37px;
+    padding-right: 20px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+header .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar-expand-lg {
+    display: none;
+}
+
+/* Logo section */
+
+a.site-logo {
+    pointer-events: none; /* Disable pointer events for the parent link */
+}
+  
+a.site-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px; /* Set a fixed width for the image */
+    pointer-events: auto; /* Enable pointer events for the image */
+}
+  
+

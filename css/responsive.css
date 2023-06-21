@@ -1,0 +1,56 @@
+@media(max-width:768px){
+
+    header .bg-body-tertiary {
+        padding-right: 10px;
+        padding-left: 10px;
+        display: none;
+    }
+
+    header .navbar-expand-lg {
+        display: block;
+        line-height: 1.7;
+    }
+
+    .navbar-toggler {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: -20px;
+        outline: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .navbar-toggler span {
+        margin-left: 5px;
+      }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+      }
+
+    .input-container, .input-field {  
+        width: 100%;
+    }
+
+    header .navbar-expand-lg .navbar-nav .nav-item {
+        border-top: 1px solid black;
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    header .navbar-expand-lg .navbar-nav .nav-item:last-child {
+        border-bottom: 1px solid black;
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    header .navbar-expand-lg .d-flex {
+        padding: 5px 0;
+    }
+
+    a.site-logo img {
+        width: 300px; /* Set a fixed width for the image */
+    }
+
+}
