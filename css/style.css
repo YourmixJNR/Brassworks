@@ -43,6 +43,7 @@ section {
 .fir-card .fir-contents .img-txt {
     width: 100%;
     height: 100%;
+    margin-bottom: 50px;
 }
 
 .fir-card .fir-contents .img-txt a {
@@ -58,8 +59,9 @@ section {
     object-fit: cover;
 }
 
-.fir-card .fir-contents .img-txt p.fir-pt {
+ .img-txt p.fir-pt {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /* Header section */
@@ -168,6 +170,8 @@ a.site-logo img {
 
 .map-section {
     margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .map-section .map-sec {
@@ -177,14 +181,30 @@ a.site-logo img {
 }
 
 .map-section .map-sec .map-sec-txt {
-    flex: 1 1 auto;
-    min-width: 50%;
+    flex: 1 1 50%;
     overflow: hidden;
     position: relative;
-    text-align: center !important;
+    text-align: center;
     padding: 30px;
     background-color: #f4f4f4;
 }
+
+.map-section .map-sec .map-sec-img {
+    flex: 1 1 50%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+  
+.map-section .map-sec .map-sec-img .sec-img {
+    background-image: url(../assets/images/add-img.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+  
 
 .btn {
     padding: 8px 16px;
@@ -197,13 +217,6 @@ a.site-logo img {
 .btn:hover {
     background-color: #b0842e;
     color: white;
-}
-
-.map-section .map-sec .map-sec-img {
-    flex: 1 1 auto;
-    min-width: 50%;
-    overflow: hidden;
-    position: relative;
 }
 
 .map-section .map-sec .map-sec-img .sec-img {
@@ -219,8 +232,9 @@ a.site-logo img {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-top: 27.5px;
-    padding-bottom: 27.5px;
+    margin-top: 5%;
+    padding-top: 40x;
+    padding-bottom: 40px;
 }
 
 .newsl-sec .newsl-sec-sub {
@@ -228,7 +242,7 @@ a.site-logo img {
     min-width: 50%;
     overflow: hidden;
     position: relative;
-    padding: 30px;
+    padding: 60px;
     background-color: #f4f4f4;
 }
 
@@ -237,6 +251,59 @@ a.site-logo img {
     min-width: 50%;
     overflow: hidden;
     position: relative;
-    padding: 30px;
+    padding: 60px;
     background-color: #eaebea;
 }
+
+.newsl-sec .newsl-sec-form .form-control, .btn-primary {
+    border-radius: 0 !important;
+    outline: none;
+    border: none;
+}
+
+/*Footer section  */
+
+.footer .ftr-wrapper {
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #b0842e;
+    border-top: 1px solid black;
+    border-color: var(--Dark-Gray);
+    margin-top: 50px;
+}
+
+.ftr-social-md {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ftr-social-md ul {
+    padding: 0;
+}
+
+.ftr-social-md ul a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #b0842e;
+}
+
+.footer .ftr-wrapper .coprt {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .ftr-wrapper .coprt a {
+    text-decoration: none;
+    color: #b0842e;
+}
+
+.pay-icons ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+  }

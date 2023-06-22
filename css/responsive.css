@@ -64,11 +64,43 @@
 
     .fir-card .fir-contents {
         grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 20px;
       }
 
-      .map-section .map-sec .map-sec-img {
-        display: none
+    .img-txt p.fir-pt {
+        margin-bottom: 20px;
       }
+
+      .map-section {
+        margin-top: 15%;
+    }
+
+    .map-section .map-sec-img {
+        display: none;
+    }
+
+}
+
+@media(max-width:749px) {
+
+    .map-section .map-sec-img {
+        display: block;
+    }
+
+    .map-section .map-sec .map-sec-txt {
+        flex: 1 1 100%;
+        order: 1;
+      }
+    
+      .map-section .map-sec .map-sec-img {
+        flex: 1 1 100%;
+        order: 2;
+      }
+
+      .map-section {
+        margin-bottom: 50%;
+        
+    }
 
 }
 
@@ -78,4 +110,4 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-  }
+}
