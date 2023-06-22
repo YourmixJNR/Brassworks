@@ -67,10 +67,6 @@
         margin-bottom: 20px;
       }
 
-    .img-txt p.fir-pt {
-        margin-bottom: 20px;
-      }
-
       .map-section {
         margin-top: 15%;
     }
@@ -78,6 +74,17 @@
     .map-section .map-sec-img {
         display: none;
     }
+
+    /* ARCHIVE PAGE */
+
+    .fir-card .archive-page {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px; /* Adjust the value to set the desired gap */
+    }
+
+    /* CONTACT PAGE */
+
 
 }
 
@@ -111,3 +118,4 @@
     }
 
 }
+
