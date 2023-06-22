@@ -58,8 +58,18 @@
         width: 300px; /* Set a fixed width for the image */
     }
 
-    .desktop-links {
+    .fir-card .fir-contents .desktop-links {
         display: none;
     }
 
+    .fir-card .fir-contents {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
 }
+
+@media screen and (max-width: 480px) {
+    .fir-card .fir-contents {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
