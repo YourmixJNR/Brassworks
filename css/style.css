@@ -16,9 +16,8 @@
 }
 
 body {
-    position: relative;
-	background: #f1f0ee; 
-	overflow: hidden;
+	background: #f1f0ee;
+    /* overflow: hidden;  */
 }
 
 /* Reuseable components */
@@ -84,6 +83,7 @@ a.site-logo img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     width: 400px; /* Set a fixed width for the image */
     pointer-events: auto; /* Enable pointer events for the image */
 }
@@ -101,7 +101,7 @@ a.site-logo img {
 }
 
 .d-links .links li {
-    margin-right: 10px; /* Add desired spacing between list items */
+    margin-right: 10px;
 }
 
 .d-links .links li a {
@@ -113,5 +113,9 @@ a.site-logo img {
 
 .d-links .links li a:visited {
     font-weight: 700;
+}
+
+.fir-image-slide {
+    margin-top: 5%;
 }
 
