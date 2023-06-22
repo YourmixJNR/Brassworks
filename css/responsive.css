@@ -58,7 +58,7 @@
         width: 300px; /* Set a fixed width for the image */
     }
 
-    .fir-card .fir-contents .desktop-links {
+    .desktop-links {
         display: none;
     }
 
@@ -66,10 +66,16 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
+      .map-section .map-sec .map-sec-img {
+        display: none
+      }
+
 }
 
 @media screen and (max-width: 480px) {
+
     .fir-card .fir-contents {
       grid-template-columns: repeat(2, 1fr);
     }
+
   }

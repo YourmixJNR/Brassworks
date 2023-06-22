@@ -150,7 +150,7 @@ a.site-logo img {
 
 /* Image slides */
 
-.fir-image-slid {
+.fir-image-slide {
     margin-top: 5%;
 }
 
@@ -164,3 +164,79 @@ a.site-logo img {
     margin-top: 2%;
 }
 
+/* Map section */
+
+.map-section {
+    margin-top: 10%;
+}
+
+.map-section .map-sec {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.map-section .map-sec .map-sec-txt {
+    flex: 1 1 auto;
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+    text-align: center !important;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+.btn {
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #b0842e;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #b0842e;
+    color: white;
+}
+
+.map-section .map-sec .map-sec-img {
+    flex: 1 1 auto;
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-section .map-sec .map-sec-img .sec-img {
+    background-image: url(../assets/images/map-img.jpg);
+    background-position: center;
+    height: 100%;
+    background-size: cover;
+}
+
+/* Newsletter section */
+
+.newsl-sec {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 27.5px;
+    padding-bottom: 27.5px;
+}
+
+.newsl-sec .newsl-sec-sub {
+    flex: 1 1 auto;
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+.newsl-sec .newsl-sec-form {
+    flex: 1 1 auto;
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    background-color: #eaebea;
+}
