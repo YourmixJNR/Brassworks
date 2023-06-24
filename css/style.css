@@ -21,7 +21,8 @@ body {
 
 /* Reuseable components */
 
-.breadcrumb a {
+.breadcrumb a, .active {
+    font-size: .9rem;
     text-decoration: none;
     color: var(--Dark-Gray);
 }
@@ -84,6 +85,36 @@ section {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.brdb .brdb-box {
+    display: flex;
+    gap: 50px;
+}
+
+
+.custom-trigger .cus-modl, .modal-body .cus-modl {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-trigger img {
+    cursor: zoom-in;
+}
+
+.modal-body .cus-modl {
+    cursor: zoom-out;
+}
+
+.brdb-box .drdb-bx-txt {
+    color: var(--Dark-Gray);
+}
+
+.fir-heading-addm {
+    font-size: 1.5rem;
+    color: var(--Dark-Gray);
+    font-weight: 700;
 }
 
 /* Header section */
@@ -266,3 +297,4 @@ a.site-logo img {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px; /* Adjust the value to set the desired gap */
 }
+
