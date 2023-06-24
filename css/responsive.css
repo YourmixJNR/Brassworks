@@ -121,10 +121,5 @@
     .fir-card .fir-contents {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    .fir-card .fir-contents .img-txt {
-        margin-bottom: 100px;
-    }
-
 }
 
