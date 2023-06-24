@@ -42,7 +42,6 @@ section {
 .fir-card .fir-contents .img-txt {
     width: 100%;
     height: 100%;
-    margin-bottom: 50px;
 }
 
 .fir-card .fir-contents .img-txt a {
@@ -55,7 +54,7 @@ section {
 .fir-card .fir-contents .img-txt img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Header section */

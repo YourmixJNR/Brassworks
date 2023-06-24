@@ -65,9 +65,9 @@
     .fir-card .fir-contents {
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 20px;
-      }
+    }
 
-      .map-section {
+    .map-section {
         margin-top: 15%;
     }
 
