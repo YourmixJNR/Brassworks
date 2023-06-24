@@ -67,6 +67,10 @@
         margin-bottom: 20px;
     }
 
+    .fir-card .fir-contents .img-txt {
+        margin-bottom: 50px;
+    }
+
     .map-section {
         margin-top: 15%;
     }
@@ -116,6 +120,10 @@
 
     .fir-card .fir-contents {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fir-card .fir-contents .img-txt {
+        margin-bottom: 100px;
     }
 
 }
