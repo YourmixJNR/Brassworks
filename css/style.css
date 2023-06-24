@@ -21,6 +21,15 @@ body {
 
 /* Reuseable components */
 
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--Dark-Gray);
+}
+
+.breadcrumb a:hover {
+    color: var(--Dark-Goldenrod);
+}
+
 section {
     padding-right: 50px;
     padding-left: 50px;
@@ -28,9 +37,24 @@ section {
     margin-left: auto;
 }
 
+.fir-card {
+    margin-top: 50px;
+}
+
 .fir-card .fir-heading {
     font-size: 1.8rem;
     color: var(--Dark-Gray);
+    margin: 50px 0;
+}
+
+.fir-card .fir-ptag {
+    color: var(--Dark-Gray);
+    margin: 20px 0;
+}
+
+.fir-card .fir-ptag a {
+    text-decoration: none;
+    color: var(--Dark-Goldenrod);
 }
 
 .fir-card .fir-contents {
@@ -109,26 +133,20 @@ a.site-logo img {
     text-decoration: none;
 }
 
+.d-links .links li a:hover {
+    color: var(--Dark-Goldenrod);
+}
+
 /* Image slides */
 
 .fir-image-slide {
     margin-top: 5%;
 }
 
-/* Previous exhibitions */
-
-.fir-card {
-    margin-top: 5%;
-}
-
-.fir-contents {
-    margin-top: 2%;
-}
-
 /* Map section */
 
 .map-section {
-    margin-top: 10%;
+    margin-top: 7%;
     margin-bottom: 7%;
     display: flex;
     flex-wrap: wrap;
