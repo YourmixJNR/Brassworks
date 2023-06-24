@@ -75,6 +75,11 @@
         display: none;
     }
 
+    .footer .ftr-wrapper .coprt {
+        font-size: .8rem;
+    }
+    
+
     /* ARCHIVE PAGE */
 
     .fir-card .archive-page {
@@ -82,9 +87,6 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px; /* Adjust the value to set the desired gap */
     }
-
-    /* CONTACT PAGE */
-
 
 }
 

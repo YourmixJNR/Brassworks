@@ -17,7 +17,6 @@
 
 body {
 	background: #f1f0ee;
-    /* overflow: hidden;  */
 }
 
 /* Reuseable components */
@@ -69,36 +68,6 @@ header .bg-body-tertiary {
     background: var(--Dark-Goldenrod) !important;
 }
 
-.input-container { 
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.input-img {
-    position:absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    left: 0;
-}
-
-.input-field { 
-    width: 70%;
-    height: 125%;
-    background: #fff;
-    padding-left: 37px;
-    padding-right: 20px;
-    border-radius: 2px;
-    border: 1px solid transparent;
-}
-
-header .navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
 header .navbar-expand-lg {
     display: none;
 }
@@ -131,7 +100,7 @@ a.site-logo img {
 }
 
 .d-links .links li {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .d-links .links li a {
@@ -139,10 +108,6 @@ a.site-logo img {
     font-size: 20px;
     color: var(--Dark-Gray);
     text-decoration: none;
-}
-
-.d-links .links li a:visited {
-    font-weight: 700;
 }
 
 /* Image slides */
@@ -221,41 +186,6 @@ a.site-logo img {
     background-size: cover;
 }
 
-/* Newsletter section */
-
-.newsl-sec {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 5%;
-    padding-top: 40x;
-    padding-bottom: 40px;
-}
-
-.newsl-sec .newsl-sec-sub {
-    flex: 1 1 auto;
-    min-width: 50%;
-    overflow: hidden;
-    position: relative;
-    padding: 60px;
-    background-color: #f4f4f4;
-}
-
-.newsl-sec .newsl-sec-form {
-    flex: 1 1 auto;
-    min-width: 50%;
-    overflow: hidden;
-    position: relative;
-    padding: 60px;
-    background-color: #eaebea;
-}
-
-.newsl-sec .newsl-sec-form .form-control, .btn-primary {
-    border-radius: 0 !important;
-    outline: none;
-    border: none;
-}
-
 /*Footer section  */
 
 .footer .ftr-wrapper {
@@ -280,11 +210,12 @@ a.site-logo img {
 .ftr-social-md ul a {
     text-decoration: none;
     font-size: 20px;
+    margin-right: 10px;
     color: #b0842e;
 }
 
 .footer .ftr-wrapper .coprt {
-    font-size: 15px;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
 }
@@ -311,18 +242,4 @@ a.site-logo img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px; /* Adjust the value to set the desired gap */
-}
-
-
-
-/*--- CONTACT PAGE ---*/
-
-.cont-form {
-    margin-top: 5%;
-}
-
-.cont-form .form-control {
-    border-radius: 0 !important;
-    outline: none;
-    border: none;
 }
