@@ -39,6 +39,7 @@ section {
 
 .fir-card {
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .fir-card .fir-heading {
@@ -69,10 +70,14 @@ section {
 }
 
 .fir-card .fir-contents .img-txt a {
-    text-align: center;
     font-weight: 800;
     color: var(--Dark-Gray);
     text-decoration: none;
+}
+
+.fir-card .fir-contents .img-txt .fir-pt-amnt {
+    font-size: .8rem;
+    font-weight: 300;
 }
   
 .fir-card .fir-contents .img-txt img {
