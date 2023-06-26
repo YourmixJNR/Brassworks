@@ -17,19 +17,10 @@
 
 body {
 	background: #f1f0ee;
+    /* overflow: hidden;  */
 }
 
 /* Reuseable components */
-
-.breadcrumb a, .active {
-    font-size: .9rem;
-    text-decoration: none;
-    color: var(--Dark-Gray);
-}
-
-.breadcrumb a:hover {
-    color: var(--Dark-Goldenrod);
-}
 
 section {
     padding-right: 50px;
@@ -38,25 +29,9 @@ section {
     margin-left: auto;
 }
 
-.fir-card {
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
 .fir-card .fir-heading {
     font-size: 1.8rem;
     color: var(--Dark-Gray);
-    margin: 50px 0;
-}
-
-.fir-card .fir-ptag {
-    color: var(--Dark-Gray);
-    margin: 20px 0;
-}
-
-.fir-card .fir-ptag a {
-    text-decoration: none;
-    color: var(--Dark-Goldenrod);
 }
 
 .fir-card .fir-contents {
@@ -68,53 +43,20 @@ section {
 .fir-card .fir-contents .img-txt {
     width: 100%;
     height: 100%;
+    margin-bottom: 50px;
 }
 
 .fir-card .fir-contents .img-txt a {
+    text-align: center;
     font-weight: 800;
     color: var(--Dark-Gray);
     text-decoration: none;
-}
-
-.fir-card .fir-contents .img-txt .fir-pt-amnt {
-    font-size: .8rem;
-    font-weight: 300;
 }
   
 .fir-card .fir-contents .img-txt img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-}
-
-.brdb .brdb-box {
-    display: flex;
-    gap: 50px;
-}
-
-
-.custom-trigger .cus-modl, .modal-body .cus-modl {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.custom-trigger img {
-    cursor: zoom-in;
-}
-
-.modal-body .cus-modl {
-    cursor: zoom-out;
-}
-
-.brdb-box .drdb-bx-txt {
-    color: var(--Dark-Gray);
-}
-
-.fir-heading-addm {
-    font-size: 1.5rem;
-    color: var(--Dark-Gray);
-    font-weight: 700;
+    object-fit: cover;
 }
 
 /* Header section */
@@ -125,6 +67,36 @@ header .bg-body-tertiary {
     margin-right: auto;
     margin-left: auto;
     background: var(--Dark-Goldenrod) !important;
+}
+
+.input-container { 
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-img {
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    left: 0;
+}
+
+.input-field { 
+    width: 70%;
+    height: 125%;
+    background: #fff;
+    padding-left: 37px;
+    padding-right: 20px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+header .navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
 header .navbar-expand-lg {
@@ -159,7 +131,7 @@ a.site-logo img {
 }
 
 .d-links .links li {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .d-links .links li a {
@@ -169,21 +141,26 @@ a.site-logo img {
     text-decoration: none;
 }
 
-.d-links .links li a:hover {
-    color: var(--Dark-Goldenrod);
-}
-
 /* Image slides */
 
 .fir-image-slide {
     margin-top: 5%;
 }
 
+/* Previous exhibitions */
+
+.fir-card {
+    margin-top: 5%;
+}
+
+.fir-contents {
+    margin-top: 2%;
+}
+
 /* Map section */
 
 .map-section {
-    margin-top: 7%;
-    margin-bottom: 7%;
+    margin-top: 10%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -238,6 +215,41 @@ a.site-logo img {
     background-position: center;
     height: 100%;
     background-size: cover;
+}
+
+/* Newsletter section */
+
+.newsl-sec {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5%;
+    padding-top: 40x;
+    padding-bottom: 40px;
+}
+
+.newsl-sec .newsl-sec-sub {
+    flex: 1 1 auto;
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+
+.newsl-sec .newsl-sec-form {
+    flex: 1 1 auto;
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding: 60px;
+    background-color: #eaebea;
+}
+
+.newsl-sec .newsl-sec-form .form-control, .btn-primary {
+    border-radius: 0 !important;
+    outline: none;
+    border: none;
 }
 
 /*Footer section  */
@@ -298,3 +310,34 @@ a.site-logo img {
     grid-gap: 30px; /* Adjust the value to set the desired gap */
 }
 
+
+
+
+
+/*--- CONTACT PAGE ---*/
+
+.cont-form {
+    width: 70%;
+    margin: 4em auto 0;
+}
+
+
+
+
+
+.cont-form .form-control {
+    border-radius: 0 !important;
+    outline: none;
+    border: none;
+}
+
+/*--- SEARCH PAGE ---*/
+.search-form .input-group {
+    max-width: 50%;
+ }
+
+.search-form .input-group .rounded, .btn-outline-primary  {
+    border-radius: 0 !important;
+    outline: none;
+    border: none;
+ }

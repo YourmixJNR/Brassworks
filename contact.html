@@ -13,7 +13,7 @@
   <!-- Favicon -->
   <link href="" rel="icon">
 
-  <title>Divergent</title>
+  <title>Contacts</title>
 
   <!-- Google Web Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
@@ -87,7 +87,7 @@
               <form class="d-flex" role="search">
                 <div class="input-container">
                   <img src="assets/icons/search-ic.png" id="search-icon" class="input-img">
-                  <input type="text" id="" class="input-field" placeholder="Search">
+                  <input type="url" id="" class="input-field" placeholder="Search">
                 </div>
               </form>
 
@@ -127,15 +127,45 @@
     
     <!-- Contact form starts -->
 
-   <section class="search-form">
+   <section class="cont-form">
 
-    <h3>Search for products on our site</h3>
+    <h3>Contacts</h3>
 
-    <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        <button type="button" class="btn btn-outline-primary">search</button>
-    </div>
+    <form>
+
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Name" id="name">
+          </div>
+        </div>
       
+        <div class="row mb-3">
+          <div class="col">
+            <input type="email" class="form-control" placeholder="Email" id="email">
+          </div>
+        </div>
+      
+        <div class="row mb-3">
+          <div class="col">
+            <input type="Phone Number" class="form-control" placeholder="Phone Number" id="phone">
+          </div>
+        </div>
+      
+        <div class="row mb-3">
+          <div class="col">
+            <textarea class="form-control" placeholder="Message" style="height: 250px;" id="message"></textarea>
+          </div>
+        </div>
+      
+        <div class="row mb-3">
+          <div class="col text-end">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+        
+      </form>
+      
+
    </section>
 
    <!-- Contact form ends -->
