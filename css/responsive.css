@@ -64,7 +64,7 @@
 
     .fir-card .fir-contents {
         grid-template-columns: repeat(3, 1fr);
-        /* margin-bottom: 20px; */
+        margin-bottom: 20px;
     }
 
     .fir-card .fir-contents .img-txt {
