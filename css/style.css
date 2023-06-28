@@ -261,7 +261,8 @@ a.site-logo img {
 }
 
 .newsl-sec .newsl-sec-box .newsl-sec-sub .cont-box {
-    display: flex;
+    display: inline-block;
+    text-align: left;
 }
 
 .newsl-sec .newsl-sec-box .newsl-sec-form {
@@ -271,6 +272,11 @@ a.site-logo img {
     position: relative;
     padding: 60px;
     background-color: #eaebea;
+}
+
+.newsl-sec .newsl-sec-box .newsl-sec-form form {
+    display: flex;
+    text-align: center;
 }
 
 .newsl-sec .newsl-sec-form .form-control, .btn-primary {
