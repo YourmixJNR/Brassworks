@@ -274,8 +274,8 @@ a.site-logo img {
     background-color: #eaebea;
 }
 
-.newsl-sec .newsl-sec-box .newsl-sec-form form {
-    display: flex;
+.newsl-sec .newsl-sec-box .newsl-sec-form {
+    display: inline-block;
     text-align: center;
 }
 
