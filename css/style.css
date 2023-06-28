@@ -240,22 +240,31 @@ a.site-logo img {
 .newsl-sec {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    margin-top: 5%;
+    margin-top: 100px;
     padding-top: 40x;
     padding-bottom: 40px;
 }
 
-.newsl-sec .newsl-sec-sub {
-    flex: 1 1 auto;
-    min-width: 50%;
+.newsl-sec .newsl-sec-box {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.newsl-sec .newsl-sec-box .newsl-sec-sub {
+    flex: 1 1 50%;
     overflow: hidden;
     position: relative;
-    padding: 60px;
+    text-align: center;
+    padding: 30px;
     background-color: #f4f4f4;
 }
 
-.newsl-sec .newsl-sec-form {
+.newsl-sec .newsl-sec-box .newsl-sec-sub .cont-box {
+    display: flex;
+}
+
+.newsl-sec .newsl-sec-box .newsl-sec-form {
     flex: 1 1 auto;
     min-width: 50%;
     overflow: hidden;
