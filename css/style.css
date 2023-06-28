@@ -36,7 +36,7 @@ section {
 .fir-card .fir-heading {
     font-size: 1.8rem;
     color: var(--Dark-Gray);
-    margin: 50px 0;
+    /* margin: 50px 0; */
 }
 
 .fir-card .fir-ptag {

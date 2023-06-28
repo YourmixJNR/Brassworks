@@ -33,12 +33,57 @@
 
     <header>
 
-        <!-- Desktop Nav -->
+      <!-- Desktop Nav -->
 
-        <nav class="navbar bg-body-tertiary">
+      <nav class="navbar bg-body-tertiary">
 
-          <div class="container-fluid">
-            
+        <div class="container-fluid">
+          
+          <form class="d-flex" role="search">
+            <div class="input-container">
+              <img src="assets/icons/search-ic.png" id="search-icon" class="input-img">
+              <input type="text" id="" class="input-field" placeholder="Search">
+            </div>
+          </form>
+
+          <a href="#" class="navbar-brand">
+            <img src="assets/icons/cart-ic.png" alt="">
+            <span>Cart</span>
+          </a>
+
+        </div>
+
+      </nav>
+
+      <!-- Responsive Nav -->
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+        <div class="container-fluid">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span><span>Menu</span>
+          </button>
+
+          <a href="#" class="navbar-brand">
+            <img src="assets/icons/cart-ic.png" alt="">
+            <span>Cart</span>
+          </a>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="archive.html">ARCHIVE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+
             <form class="d-flex" role="search">
               <div class="input-container">
                 <img src="assets/icons/search-ic.png" id="search-icon" class="input-img">
@@ -46,56 +91,11 @@
               </div>
             </form>
 
-            <a href="#" class="navbar-brand">
-              <img src="assets/icons/cart-ic.png" alt="">
-              <span>Cart</span>
-            </a>
-
           </div>
 
-        </nav>
+        </div>
 
-        <!-- Responsive Nav -->
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-
-          <div class="container-fluid">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span><span>Menu</span>
-            </button>
-
-            <a href="#" class="navbar-brand">
-              <img src="assets/icons/cart-ic.png" alt="">
-              <span>Cart</span>
-            </a>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="archive.html">ARCHIVE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="contact.html">CONTACT</a>
-                </li>
-              </ul>
-
-              <form class="d-flex" role="search">
-                <div class="input-container">
-                  <img src="assets/icons/search-ic.png" id="search-icon" class="input-img">
-                  <input type="text" id="" class="input-field" placeholder="Search">
-                </div>
-              </form>
-
-            </div>
-
-          </div>
-
-        </nav>
+      </nav>
           
     </header>
 
@@ -103,7 +103,7 @@
     
     <!-- Logo section starts -->
 
-      <a class="site-logo" href="archive.html">
+      <a class="site-logo" href="index.html">
         <img src="assets/images/BrassworksLOGO.png" alt="">
       </a>
       
@@ -197,7 +197,7 @@
 
       <h1 class="fir-heading">Previous Exhibitions</h1>
 
-      <div class="fir-contents" style="margin-top: 0;">
+      <div class="fir-contents">
 
         <div class="img-txt">
           <a href="archive.html">
