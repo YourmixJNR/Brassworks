@@ -274,11 +274,6 @@ a.site-logo img {
     background-color: #eaebea;
 }
 
-.newsl-sec .newsl-sec-box .newsl-sec-form {
-    display: inline-block;
-    text-align: center;
-}
-
 .newsl-sec .newsl-sec-form .form-control, .btn-primary {
     border-radius: 0 !important;
     outline: none;
