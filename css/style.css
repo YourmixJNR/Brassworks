@@ -21,6 +21,16 @@ body {
 
 /* Reuseable components */
 
+.breadcrumb a, .active {
+    font-size: .9rem;
+    text-decoration: none;
+    color: var(--Dark-Gray);
+}
+
+.breadcrumb a:hover {
+    color: var(--Dark-Goldenrod);
+}
+
 section {
     padding-right: 50px;
     padding-left: 50px;
