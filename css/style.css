@@ -91,6 +91,36 @@ section {
     box-shadow: none;
 }
 
+.brdb .brdb-box {
+    display: flex;
+    gap: 50px;
+}
+
+
+.custom-trigger .cus-modl, .modal-body .cus-modl {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-trigger img {
+    cursor: zoom-in;
+}
+
+.modal-body .cus-modl {
+    cursor: zoom-out;
+}
+
+.brdb-box .drdb-bx-txt {
+    color: var(--Dark-Gray);
+}
+
+.fir-heading-addm {
+    font-size: 1.5rem;
+    color: var(--Dark-Gray);
+    font-weight: 700;
+}
+
 /* Header section */
 
 header .bg-body-tertiary {
