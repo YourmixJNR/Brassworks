@@ -77,6 +77,11 @@ section {
     object-fit: contain;
 }
 
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
 /* Header section */
 
 header .bg-body-tertiary {
@@ -344,17 +349,12 @@ a.site-logo img {
 
 
 
-
-
 /*--- CONTACT PAGE ---*/
 
 .cont-form {
     width: 70%;
     margin: 4em auto 0;
 }
-
-
-
 
 
 .cont-form .form-control {
@@ -364,6 +364,16 @@ a.site-logo img {
 }
 
 /*--- SEARCH PAGE ---*/
+
+.search-form {
+    margin: 4em 0;
+}
+
+.search-form .search-form-heading {
+    margin-bottom: 50px;
+}
+
+
 .search-form .input-group {
     max-width: 50%;
  }
