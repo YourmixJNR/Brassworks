@@ -330,6 +330,11 @@ a.site-logo img {
 
 /*--- ARCHIVE PAGE ---*/
 
+.sec-archive-page {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .fir-card .archive-page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -345,12 +350,13 @@ a.site-logo img {
     margin: 4em auto 0;
 }
 
-
 .cont-form .form-control {
     border-radius: 0 !important;
     outline: none;
     border: none;
 }
+
+
 
 /*--- SEARCH PAGE ---*/
 
@@ -361,7 +367,6 @@ a.site-logo img {
 .search-form .search-form-heading {
     margin-bottom: 50px;
 }
-
 
 .search-form .input-group {
     max-width: 50%;
