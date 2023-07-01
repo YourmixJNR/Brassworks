@@ -82,6 +82,17 @@
     .footer .ftr-wrapper .coprt {
         font-size: .8rem;
     }
+
+    .brdb-box .drdb-bx-mdl {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .brdb .brdb-box {
+        flex-wrap: wrap;
+    }
+    
     
 
     /* ARCHIVE PAGE */
