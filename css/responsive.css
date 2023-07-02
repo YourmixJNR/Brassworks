@@ -93,8 +93,11 @@
         flex-wrap: wrap;
     }
     
+    .brdb .brdb-box {
+        display: flex;
+        justify-content: center;
+    }
     
-
     /* ARCHIVE PAGE */
 
     .fir-card .archive-page {
