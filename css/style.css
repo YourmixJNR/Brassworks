@@ -435,7 +435,11 @@ a.site-logo img {
 color: var(--Dark-Gray);
  }
 
-.cart-page .txt-box .cart-p {
+ .cart-page .txt-box .cart-h {
+    margin: 30px 0;
+ }
+
+.cart-page .txt-box h2 .cart-p {
     margin: 0 0 15px 0;
  }
 
