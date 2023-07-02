@@ -428,3 +428,18 @@ a.site-logo img {
     outline: none;
     border: none;
  }
+
+ /* CART PAGE */
+
+.cart-page .txt-box {
+color: var(--Dark-Gray);
+ }
+
+.cart-page .txt-box .cart-p {
+    margin: 0 0 15px 0;
+ }
+
+ .cart-page .txt-box .cart-p a {
+    color: var(--Dark-Goldenrod);
+    text-decoration: none;
+ }
