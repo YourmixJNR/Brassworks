@@ -96,7 +96,6 @@ section {
     gap: 50px;
 }
 
-
 .custom-trigger .cus-modl, .modal-body .cus-modl {
     max-width: 100%;
     height: auto;
@@ -113,6 +112,19 @@ section {
 
 .brdb-box .drdb-bx-txt {
     color: var(--Dark-Gray);
+}
+
+.brdb-box .drdb-bx-txt .pri-edi {
+    font-size: 30px;
+    color: var(--Dark-Goldenrod);
+}
+
+.brdb-box .drdb-bx-txt .add-cart-btn {
+    padding: 8px 90px;
+    cursor: pointer;
+    background: inherit;
+    color: var(--Dark-Goldenrod);
+    border: 1px solid var(--Dark-Goldenrod);
 }
 
 .fir-heading-addm {
@@ -248,7 +260,6 @@ a.site-logo img {
     height: 100%;
 }
   
-
 .btn {
     padding: 8px 16px;
     cursor: pointer;
