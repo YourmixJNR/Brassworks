@@ -31,7 +31,8 @@ const products = [
     // Add more product objects as needed
   ];
   
-  /// Function to search for products
+ 
+// Function to search for products
 function searchProducts(query) {
     query = query.toLowerCase();
     const results = products.filter(product =>
@@ -40,14 +41,16 @@ function searchProducts(query) {
     return results;
   }
   
-  // Handle form submission
-  const searchForm = document.getElementsByClassName('searchForm')[0]; // Use [0] to select the first element with the class
-  searchForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const searchInput = document.getElementsByClassName('searchInput')[0]; // Use [0] to select the first element with the class
-    const query = searchInput.value;
-    const results = searchProducts(query);
-    redirectToResults(query, results);
+  // Handle form submissions
+  const searchForms = document.getElementsByClassName('searchForm');
+  Array.from(searchForms).forEach(searchForm => {
+    searchForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const searchInput = this.getElementsByClassName('searchInput')[0]; // Use [0] to select the first input element within the form
+      const query = searchInput.value;
+      const results = searchProducts(query);
+      redirectToResults(query, results);
+    });
   });
   
   // Function to redirect to results.html and pass the query and results as URL parameters
@@ -57,4 +60,5 @@ function searchProducts(query) {
     url.searchParams.set('results', JSON.stringify(results));
     window.location.href = url.href;
   }
+  
   
