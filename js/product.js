@@ -1,20 +1,32 @@
 // Array or JSON object to store products
 const products = [
     {
-      name: 'Urban Aesop',
-      image: 'assets/images/img3.jpg',
+      image: 'assets/images/img1.jpg',
+      name: 'Tears Ascend • Roger Gillis',
+      link: 'product1.html',
+      price: '$1,500.00',
+      description: 'Tears AscendAcrylic on Canvas24” x 36”$600Roger Gillis',
     },
     {
-      name: 'Available Never',
-      image: 'assets/images/img4.jpg',
+        image: 'assets/images/img2.jpg',
+        name: 'Adorning a cage • Wynter Jones',
+        link: 'product2.html',
+        price: '$1,500.00',
+        description: 'Adorning a cage Watercolor on clayboard 6” x 18” $800.00 Wynter Jones',
     },
     {
-      name: 'Digital Pop',
-      image: 'assets/images/Archive/Digital Pop.jpg',
+        image: 'assets/images/img3.jpg',
+        name: 'Everywhere a Sign • NEKON',
+        link: 'product3.html',
+        price: '$1,500.00',
+        description: 'NEKON Everywhere a Sign Acrylic 12" x 12" $450.00',
     },
     {
-      name: 'Flesh and Concrete',
-      image: 'assets/images/Archive/Flesh and Concrete.jpg',
+        image: 'assets/images/img4.jpg',
+        name: 'Duddon Took A Jump • WS Cranmore',
+        link: 'product4.html',
+        price: '$1,500.00',
+        description: 'Duddon Took A JumpAcrylic and charcoal 18x24x0.05600.00',
     },
     // Add more product objects as needed
   ];
@@ -44,4 +56,4 @@ const products = [
     url.searchParams.set('query', query);
     url.searchParams.set('results', JSON.stringify(results));
     window.location.href = url.href;
-  }
+}

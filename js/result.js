@@ -13,23 +13,34 @@ function displayResults(query, results) {
   } else {
     results.forEach(product => {
       const div = document.createElement('div');
-      div.className = 'img-txt';
+      div.className = 'product'; // Add CSS class for the product container
 
       const link = document.createElement('a');
-      link.href = 'divergent.html';
+      link.href = product.link; // Use the product-specific link
 
       const img = document.createElement('img');
       img.src = product.image;
       img.alt = '';
 
-      const p = document.createElement('p');
-      p.className = 'fir-pt';
-      p.textContent = product.name;
+      const name = document.createElement('p');
+      name.className = 'product-name'; // Add CSS class for the product name
+      name.textContent = product.name;
+
+      const price = document.createElement('p');
+      price.className = 'product-price'; // Add CSS class for the product price
+      price.textContent = product.price;
+
+      const description = document.createElement('p');
+      description.className = 'product-description'; // Add CSS class for the product description
+      description.textContent = product.description;
 
       link.appendChild(img);
       link.appendChild(document.createElement('br'));
-      link.appendChild(p);
+      link.appendChild(name);
       link.appendChild(document.createElement('br'));
+      link.appendChild(price);
+      link.appendChild(document.createElement('br'));
+      link.appendChild(description);
       div.appendChild(link);
       searchResults.appendChild(div);
     });
