@@ -447,3 +447,40 @@ color: var(--Dark-Gray);
     color: var(--Dark-Goldenrod);
     text-decoration: none;
  }
+
+
+
+ /*--- RESULT PAGE ---*/
+
+ .product {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .product img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .product-description {
+    font-size: 14px;
+    color: #444;
+  }
+  
