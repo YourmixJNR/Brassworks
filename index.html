@@ -39,10 +39,11 @@
 
         <div class="container-fluid">
           
-          <form class="d-flex" role="search">
+          <form id="searchForm" class="d-flex" role="search">
             <div class="input-container">
               <img src="assets/icons/search-ic.png" id="search-icon" class="input-img">
-              <input type="text" id="" class="input-field" placeholder="Search">
+              <input type="text" id="searchInput" class="input-field" placeholder="Search">
+              <!-- <button type="submit">Search</button> -->
             </div>
           </form>
 
@@ -96,6 +97,11 @@
         </div>
 
       </nav>
+
+      <!-- <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Enter a product name">
+        <button type="submit">Search</button>
+      </form> -->
           
     </header>
 
@@ -124,6 +130,8 @@
     </section>
 
     <!-- Desktop links ends -->
+
+    <div id="searchResults"></div>
 
     <!-- Image slides starts -->
 
@@ -346,6 +354,57 @@
     <!-- Footer section ends -->
 
     <!-- js -->
+    <script>
+// Array or JSON object to store products
+const products = [
+  {
+    name: 'Urban Aesop',
+    image: 'assets/images/img3.jpg',
+  },
+  {
+    name: 'Available Never',
+    image: 'assets/images/img4.jpg',
+  },
+  {
+    name: 'Digital Pop',
+    image: 'assets/images/Archive/Digital Pop.jpg',
+  },
+  {
+    name: 'Flesh and Concrete',
+    image: 'assets/images/Archive/Flesh and Concrete.jpg',
+  },
+  // Add more product objects as needed
+];
+
+// Function to search for products
+function searchProducts(query) {
+  query = query.toLowerCase();
+  const results = products.filter(product =>
+    product.name.toLowerCase().includes(query)
+  );
+  return results;
+}
+
+// Handle form submission
+const searchForm = document.getElementById('searchForm');
+searchForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const searchInput = document.getElementById('searchInput');
+  const query = searchInput.value;
+  const results = searchProducts(query);
+  redirectToResults(query, results);
+});
+
+// Function to redirect to results.html and pass the query and results as URL parameters
+function redirectToResults(query, results) {
+  const url = new URL('result.html', window.location.href);
+  url.searchParams.set('query', query);
+  url.searchParams.set('results', JSON.stringify(results));
+  window.location.href = url.href;
+}
+
+    </script>
+    
     <script src="js/search.js"></script>
     
     <!-- Bootstrap core JavaScript
