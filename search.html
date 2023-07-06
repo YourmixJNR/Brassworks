@@ -131,10 +131,12 @@
 
     <h3 class="search-form-heading">Search for products on our site</h3>
 
-    <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        <button type="button" class="btn btn-outline-primary">search</button>
-    </div>
+    <form class="searchForm" role="search">
+      <div class="input-group input-container">
+        <input type="text" class="form-control rounded searchInput" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="submit" class="btn btn-outline-primary">search</button>
+      </div>
+    </form>
       
    </section>
 
@@ -187,6 +189,8 @@
     <!-- Footer section ends -->
 
     <!-- js -->
+    <script src="js/product.js?v=123456789"></script>
+
     <script src="js/search.js"></script>
 
     <!-- Bootstrap core JavaScript
