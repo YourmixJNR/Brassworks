@@ -6,6 +6,9 @@ displayResults(query, results);
 
 // Function to display search results
 function displayResults(query, results) {
+  const searchHeading = document.getElementById('searchHeading');
+  searchHeading.textContent = `Your search for "${query}" revealed the following:`;
+  
   const searchResults = document.getElementById('searchResults');
 
   if (results.length === 0) {

@@ -459,7 +459,7 @@ color: var(--Dark-Gray);
   
   .product-image {
     flex-shrink: 0;
-    margin-right: 20px;
+    margin-right: 50px;
   }
   
   .product img {
@@ -471,8 +471,10 @@ color: var(--Dark-Gray);
     flex-grow: 1;
   }
   
-  .product-name {
+  .product-name a {
     font-size: 18px;
+    text-decoration: none;
+    color: var(--Dark-Goldenrod);
     font-weight: bold;
   }
   
