@@ -12,9 +12,6 @@ function displayResults(query, results) {
     searchResults.textContent = 'No results found.';
   } else {
     results.forEach(product => {
-      const link = document.createElement('a');
-      link.href = product.link; // Use the product-specific link
-
       const div = document.createElement('div');
       div.className = 'product'; // Add CSS class for the product container
 
@@ -24,6 +21,8 @@ function displayResults(query, results) {
       const img = document.createElement('img');
       img.src = product.image;
       img.alt = '';
+
+      imgDiv.appendChild(img); // Append the image to the image container
 
       const detailsDiv = document.createElement('div');
       detailsDiv.className = 'product-details'; // Add CSS class for the details container
@@ -35,23 +34,13 @@ function displayResults(query, results) {
       nameLink.href = product.link; // Use the product-specific link
       nameLink.textContent = product.name;
 
-      const price = document.createElement('p');
-      price.className = 'product-price'; // Add CSS class for the product price
-      price.textContent = product.price;
-
-      const description = document.createElement('p');
-      description.className = 'product-description'; // Add CSS class for the product description
-      description.textContent = product.description;
-
-      imgDiv.appendChild(img);
       name.appendChild(nameLink); // Wrap the product name with the link
       detailsDiv.appendChild(name);
-      detailsDiv.appendChild(price);
-      detailsDiv.appendChild(description);
-      div.appendChild(detailsDiv);
+      detailsDiv.innerHTML += `<p class="product-price">${product.price}</p>`; // Add product price
+      detailsDiv.innerHTML += `<p class="product-description">${product.description}</p>`; // Add product description
       div.appendChild(imgDiv);
-      link.appendChild(div); // Wrap the product container with the link
-      searchResults.appendChild(link);
+      div.appendChild(detailsDiv);
+      searchResults.appendChild(div);
     });
   }
 }
