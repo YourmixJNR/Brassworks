@@ -454,19 +454,21 @@ color: var(--Dark-Gray);
 
  .product {
     display: flex;
-    align-items: center;
-    margin: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    flex-shrink: 0;
+    margin-right: 20px;
   }
   
   .product img {
     width: 200px;
     height: auto;
-    margin-right: 20px;
   }
   
   .product-details {
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1;
   }
   
   .product-name {
@@ -483,4 +485,5 @@ color: var(--Dark-Gray);
     font-size: 14px;
     color: #444;
   }
+  
   
