@@ -116,6 +116,16 @@
     .search-form .input-group {
         max-width: 100%;
     }
+    
+     .product {
+        display: flex;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .product-name {
+        margin: 20px 0;
+      }
 
 }
 

@@ -455,17 +455,18 @@ color: var(--Dark-Gray);
 .result-div .sah-heading {
     font-size: 1.8rem;
     color: var(--Dark-Gray);
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
  .product {
     display: flex;
-    margin-bottom: 20px;
+    padding: 20px 0;
+    border-top: 1px solid var(--Dark-Gray);
   }
   
   .product-image {
     flex-shrink: 0;
-    margin-right: 50px;
+    margin-right: 20px;
   }
   
   .product img {
