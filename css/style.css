@@ -452,6 +452,12 @@ color: var(--Dark-Gray);
 
  /*--- RESULT PAGE ---*/
 
+.result-div .sah-heading {
+    font-size: 1.8rem;
+    color: var(--Dark-Gray);
+    margin-bottom: 50px;
+}
+
  .product {
     display: flex;
     margin-bottom: 20px;
@@ -479,12 +485,12 @@ color: var(--Dark-Gray);
   }
   
   .product-price {
-    font-size: 16px;
+    font-size: 20px;
     color: #888;
   }
   
   .product-description {
-    font-size: 14px;
+    font-size: 18px;
     color: #444;
   }
   
