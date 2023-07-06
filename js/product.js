@@ -28,13 +28,6 @@ const products = [
         price: '$1,500.00',
         description: 'Duddon Took A JumpAcrylic and charcoal 18x24x0.05600.00',
     },
-    {
-      image: 'assets/images/img5.jpg',
-      name: 'In A Dream About Diebenkorn • WS Cranmore',
-      link: 'product5.html',
-      price: '$1,100.00',
-      description: 'Duddon Took A JumpAcrylic and charcoal,
-  },
     // Add more product objects as needed
   ];
   
