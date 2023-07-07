@@ -57,11 +57,11 @@ const products = [
   },
 
   {
-    image: 'assets/images/img4.jpg',
-    name: 'Duddon Took A Jump • WS Cranmore',
-    link: 'product4.html',
-    price: '$1,500.00',
-    description: 'Duddon Took A JumpAcrylic and charcoal 18x24x0.05600.00',
+      image: 'assets/images/img4.jpg',
+      name: 'Duddon Took A Jump • WS Cranmore',
+      link: 'product4.html',
+      price: '$1,500.00',
+      description: 'Duddon Took A JumpAcrylic and charcoal 18x24x0.05600.00',
   },
   // Add more product objects as needed
 ];

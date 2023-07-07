@@ -494,5 +494,32 @@ color: var(--Dark-Gray);
     font-size: 18px;
     color: #444;
   }
+
+  #pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
   
+  #pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-transition:.5s all;
+	-moz-transition:.5s all;
+	-o-transition:.5s all;
+	-ms-transition:.5s all;
+	transition:.5s all; 
+  }
+  
+  #pagination a:hover {
+    color: #fff;
+    background-color: var(--Dark-Goldenrod);
+  }
   
