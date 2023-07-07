@@ -2,19 +2,33 @@
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('query');
 const results = JSON.parse(urlParams.get('results'));
-displayResults(query, results);
+const itemsPerPage = 5; // Number of items to display per page
+displayResults(query, results, 1, itemsPerPage); // Display the first page by default
 
-// Function to display search results
-function displayResults(query, results) {
+// Function to display search results with pagination
+function displayResults(query, results, currentPage, itemsPerPage) {
   const searchHeading = document.getElementById('searchHeading');
   searchHeading.textContent = `Your search for "${query}" revealed the following:`;
-  
+
   const searchResults = document.getElementById('searchResults');
+  const paginationContainer = document.getElementById('pagination');
+
+  // Clear previous results and pagination
+  searchResults.innerHTML = '';
+  paginationContainer.innerHTML = '';
 
   if (results.length === 0) {
     searchResults.textContent = 'No results found.';
   } else {
-    results.forEach(product => {
+    // Calculate pagination values
+    const totalItems = results.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    // Display results for the current page
+    const currentPageResults = results.slice(startIndex, endIndex);
+    currentPageResults.forEach(product => {
       const div = document.createElement('div');
       div.className = 'product'; // Add CSS class for the product container
 
@@ -45,5 +59,16 @@ function displayResults(query, results) {
       div.appendChild(detailsDiv);
       searchResults.appendChild(div);
     });
+
+    // Display pagination links
+    for (let page = 1; page <= totalPages; page++) {
+      const link = document.createElement('a');
+      link.href = `#page${page}`;
+      link.textContent = page;
+      link.addEventListener('click', function() {
+        displayResults(query, results, page, itemsPerPage);
+      });
+      paginationContainer.appendChild(link);
+    }
   }
 }
