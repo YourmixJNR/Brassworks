@@ -77,23 +77,26 @@ function searchProducts(query) {
   }
   
   // Handle form submissions
-  const searchForms = document.getElementsByClassName('searchForm');
-  Array.from(searchForms).forEach(searchForm => {
-    searchForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const searchInput = this.getElementsByClassName('searchInput')[0]; // Use [0] to select the first input element within the form
-      const query = searchInput.value;
-      const results = searchProducts(query);
-      redirectToResults(query, results);
-    });
+const searchForms = document.getElementsByClassName('searchForm');
+Array.from(searchForms).forEach(searchForm => {
+  searchForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const searchInput = this.getElementsByClassName('searchInput')[0]; // Use [0] to select the first input element within the form
+    const query = searchInput.value;
+    const results = searchProducts(query);
+    redirectToResults(query, results);
   });
+});
   
-  // Function to redirect to results.html and pass the query and results as URL parameters
-  function redirectToResults(query, results) {
-    const url = new URL('result.html', window.location.href);
+ // Function to redirect to results.html and pass the query and results as URL parameters
+function redirectToResults(query, results) {
+  const url = new URL('result.html', window.location.href);
+  if (query) {
     url.searchParams.set('query', query);
-    url.searchParams.set('results', JSON.stringify(results));
-    window.location.href = url.href;
   }
-  
+  if (results) {
+    url.searchParams.set('results', JSON.stringify(results));
+  }
+  window.location.href = url.href;
+}
   
