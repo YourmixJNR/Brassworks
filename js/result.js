@@ -2,96 +2,73 @@
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('query');
 const results = JSON.parse(urlParams.get('results'));
+const itemsPerPage = 5; // Number of items to display per page
+displayResults(query, results, 1, itemsPerPage); // Display the first page by default
 
-// Display search query if available
-const searchHeading = document.getElementById('searchHeading');
-if (query) {
+// Function to display search results with pagination
+function displayResults(query, results, currentPage, itemsPerPage) {
+  const searchHeading = document.getElementById('searchHeading');
   searchHeading.textContent = `Your search for "${query}" revealed the following:`;
-} else {
-  searchHeading.textContent = `Your search for "${query}" revealed the following:`;
-}
 
-// Define the number of products to display per page
-const productsPerPage = 10;
-
-// Calculate the number of pages based on the results and products per page
-const totalPages = Math.ceil(results.length / productsPerPage);
-
-// Function to display search results for a specific page
-function displayResults(page) {
   const searchResults = document.getElementById('searchResults');
+  const paginationContainer = document.getElementById('pagination');
+
+  // Clear previous results and pagination
   searchResults.innerHTML = '';
+  paginationContainer.innerHTML = '';
 
   if (results.length === 0) {
     searchResults.textContent = 'No results found.';
   } else {
-    const startIndex = (page - 1) * productsPerPage;
-    const endIndex = startIndex + productsPerPage;
-    const pageResults = results.slice(startIndex, endIndex);
+    // Calculate pagination values
+    const totalItems = results.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
 
-    pageResults.forEach(product => {
-      // Create the product element and its contents
-      const productDiv = document.createElement('div');
-      productDiv.classList.add('product');
+    // Display results for the current page
+    const currentPageResults = results.slice(startIndex, endIndex);
+    currentPageResults.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product'; // Add CSS class for the product container
 
-      const productImage = document.createElement('div');
-      productImage.classList.add('product-image');
-      const image = document.createElement('img');
-      image.src = product.image;
-      image.alt = product.name;
-      productImage.appendChild(image);
-      productDiv.appendChild(productImage);
+      const imgDiv = document.createElement('div');
+      imgDiv.className = 'product-image'; // Add CSS class for the image container
 
-      const productDetails = document.createElement('div');
-      productDetails.classList.add('product-details');
+      const img = document.createElement('img');
+      img.src = product.image;
+      img.alt = '';
 
-      const productName = document.createElement('div');
-      productName.classList.add('product-name');
-      const nameLink = document.createElement('a');
-      nameLink.href = product.link;
+      imgDiv.appendChild(img); // Append the image to the image container
+
+      const detailsDiv = document.createElement('div');
+      detailsDiv.className = 'product-details'; // Add CSS class for the details container
+
+      const name = document.createElement('p');
+      name.className = 'product-name'; // Add CSS class for the product name
+
+      const nameLink = document.createElement('a'); // Create the link element for the product name
+      nameLink.href = product.link; // Use the product-specific link
       nameLink.textContent = product.name;
-      productName.appendChild(nameLink);
-      productDetails.appendChild(productName);
 
-      const productPrice = document.createElement('div');
-      productPrice.classList.add('product-price');
-      productPrice.textContent = product.price;
-      productDetails.appendChild(productPrice);
-
-      const productDescription = document.createElement('div');
-      productDescription.classList.add('product-description');
-      productDescription.textContent = product.description;
-      productDetails.appendChild(productDescription);
-
-      productDiv.appendChild(productDetails);
-
-      searchResults.appendChild(productDiv);
+      name.appendChild(nameLink); // Wrap the product name with the link
+      detailsDiv.appendChild(name);
+      detailsDiv.innerHTML += `<p class="product-price">${product.price}</p>`; // Add product price
+      detailsDiv.innerHTML += `<p class="product-description">${product.description}</p>`; // Add product description
+      div.appendChild(imgDiv);
+      div.appendChild(detailsDiv);
+      searchResults.appendChild(div);
     });
-  }
-}
 
-// Function to create the pagination links
-function createPagination() {
-  const pagination = document.getElementById('pagination');
-  pagination.innerHTML = '';
-
-  if (totalPages > 1) {
+    // Display pagination links
     for (let page = 1; page <= totalPages; page++) {
-      const pageLink = document.createElement('a');
-      pageLink.href = '#';
-      pageLink.textContent = page;
-
-      pageLink.addEventListener('click', function () {
-        displayResults(page);
+      const link = document.createElement('a');
+      link.href = `#page${page}`;
+      link.textContent = page;
+      link.addEventListener('click', function() {
+        displayResults(query, results, page, itemsPerPage);
       });
-
-      pagination.appendChild(pageLink);
+      paginationContainer.appendChild(link);
     }
   }
 }
-
-// Display the search results for the first page
-displayResults(1);
-
-// Create the pagination links
-createPagination();
