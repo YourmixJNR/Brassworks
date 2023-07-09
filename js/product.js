@@ -3,7 +3,7 @@ const products = [
   {
     image: 'assets/images/img1.jpg',
     name: 'Tears Ascend • Roger Gillis',
-    link: 'product1.html',
+    link: 'tears-ascend.html',
     price: '$1,500.00',
     description: 'Tears AscendAcrylic on Canvas24” x 36”$600Roger Gillis',
   },
