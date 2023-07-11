@@ -1,11 +1,12 @@
 // Fetch products data from JSON file
-function fetchProducts() {
-  return fetch('products.json')
-    .then(response => response.json())
-    .catch(error => {
-      console.error('Error fetching products:', error);
-      return [];
-    });
+async function fetchProducts() {
+  try {
+    const response = await fetch('products.json');
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    return [];
+  }
 }
 
 // Function to search for products
