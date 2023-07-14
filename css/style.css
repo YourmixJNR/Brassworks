@@ -234,6 +234,12 @@ header .navbar-expand-lg {
     font-size: 15px;
 }
 
+.acct-box .ab-form .forget-pass a {
+    font-size: 14px;
+    color: var(--Dark-Goldenrod);
+    float: right;
+}
+
 /* Logo section */
 
 a.site-logo {
