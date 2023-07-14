@@ -40,17 +40,19 @@
 
         <div class="ab-form">
 
-            <form action="">
+            <form id="signin-form" action="">
 
                 <div class="user-details">
-                    <input type="text" name="" required>
+                    <input id="usernameEmail" type="text" name="" required>
                     <label for="">Username or Email</label>
                 </div>
 
                 <div class="user-details">
-                    <input type="password" name="" required>
+                    <input id="userPassword" type="password" name="" required>
                     <label for="">Password</label>
                 </div>
+
+                <div id="errorMessage"></div>
 
                 <div class="forget-pass">
                     <a href="#">Forget Password ?</a>
@@ -69,6 +71,8 @@
         </div>
 
     </div>
+
+    <script src="js/signin.js"></script>
     
     <!-- Bootstrap core JavaScript
     ================================================== -->
