@@ -158,6 +158,10 @@
 
 @media screen and (max-width: 480px) {
 
+    .acct-box {
+        width: 350px;
+    }
+
     .fir-card .fir-contents {
       grid-template-columns: repeat(2, 1fr);
     }

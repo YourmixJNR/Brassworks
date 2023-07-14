@@ -186,11 +186,17 @@ header .navbar-expand-lg {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: #f1f0ee;
     box-sizing: border-box;
     border-radius: 5px;
+}
+
+.acct-box .form-txts {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .acct-box .ab-form .user-details {
@@ -199,12 +205,12 @@ header .navbar-expand-lg {
 
 .acct-box .ab-form .user-details input {
     width: 100%;
-    padding: 15px 10px;
-    font-size: 16px;
+    padding: 10px 0;
+    font-size: 17px;
     color: var(--Dark-Gray);
     margin-bottom: 30px;
     border: none;
-    border: 1px solid var(--Dark-Gray);
+    border-bottom: 1px solid var(--Dark-Gray);
     outline: none;
     background: transparent;
 }
@@ -212,8 +218,8 @@ header .navbar-expand-lg {
 .acct-box .ab-form .user-details label {
     position: absolute;
     top: 0;
-    left: 15px;
-    padding: 15px 0;
+    left: 0;
+    padding: 10px 0;
     font-size: 16px;
     color: var(--Dark-Gray);
     pointer-events: none;
@@ -222,8 +228,8 @@ header .navbar-expand-lg {
 
 .acct-box .ab-form .user-details input:focus~label,
 .acct-box .ab-form .user-details input:valid~label {
-    top: -15px;
-    left: 10px;
+    top: -20px;
+    left: 0;
     color: var(--Dark-Goldenrod);
     font-size: 15px;
 }
