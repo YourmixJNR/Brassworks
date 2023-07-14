@@ -171,6 +171,9 @@ header .bg-body-tertiary {
 header .navbar-brand {
     display: flex;
     align-items: center;
+    font-size: 18px;
+    gap: 5px;
+    margin-right: 0 !important;
 }
 
 header .navbar-expand-lg {

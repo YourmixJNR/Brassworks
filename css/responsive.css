@@ -16,6 +16,10 @@
         line-height: 1.7;
     }
 
+    header .navbar-brand {
+        gap: 20px
+}
+
     .navbar-toggler {
         display: flex;
         align-items: center;
