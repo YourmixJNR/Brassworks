@@ -251,7 +251,7 @@ header .navbar-expand-lg {
     text-transform: uppercase;
     overflow: hidden;
     letter-spacing: 4px;
-    margin-top: 40px;
+    margin-top: 10px;
     transition: .5s;
 }
 
@@ -347,6 +347,17 @@ header .navbar-expand-lg {
     100% {
       bottom: 100%;
     }
+}
+
+.acct-box .terms-cond {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 2em;
+}
+
+.acct-box .terms-cond a {
+    font-weight: 700;
+    color: var(--Dark-Goldenrod);
 }
 
 /* Logo section */
