@@ -180,6 +180,54 @@ header .navbar-expand-lg {
     display: none;
 }
 
+/* Account [Sign up / Sign in] page*/
+
+.acct-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #f1f0ee;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.acct-box .ab-form .user-details {
+    position: relative;
+}
+
+.acct-box .ab-form .user-details input {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    color: var(--Dark-Gray);
+    margin-bottom: 30px;
+    border: none;
+    border: 1px solid var(--Dark-Gray);
+    outline: none;
+    background: transparent;
+}
+
+.acct-box .ab-form .user-details label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    padding: 15px 0;
+    font-size: 16px;
+    color: var(--Dark-Gray);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.acct-box .ab-form .user-details input:focus~label,
+.acct-box .ab-form .user-details input:valid~label {
+    top: -15px;
+    left: 10px;
+    color: var(--Dark-Goldenrod);
+    font-size: 15px;
+}
+
 /* Logo section */
 
 a.site-logo {
