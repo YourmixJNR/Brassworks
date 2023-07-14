@@ -366,6 +366,13 @@ header .navbar-expand-lg {
     margin-bottom: 10px;
 }
 
+/* Dashboard section */
+
+#welcomeContainer {
+    font-size: 20px;
+    font-weight: 700;
+}
+
 /* Logo section */
 
 a.site-logo {
