@@ -24,5 +24,5 @@ document.getElementById('signin-form').addEventListener('submit', function (e) {
 document.getElementById('forgetPasswordLink').addEventListener('click', function(e) {
     e.preventDefault();
     // Display an alert message
-    alert("YourmixJNR_Dev 😎 is still working on this feature. \n\ Cheers 🥂");
+    alert("YourmixJNR_Dev 😎 is still working on this feature. \n\Cheers 🥂");
   });

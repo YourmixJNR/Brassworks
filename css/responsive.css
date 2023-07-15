@@ -18,6 +18,11 @@
 
     header .navbar-brand {
         gap: 20px
+    }
+    
+    header .navbar-brand img {
+        width: 100%;
+        gap: 20px
 }
 
     .navbar-toggler {
