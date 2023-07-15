@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add an event listener to the logout button
     logoutButton.addEventListener('click', function() {
         // Remove the authentication status if needed
-        localStorage.removeItem('authenticated');
+        localStorage.setItem('authenticated', 'false');
 
         // Redirect to the index.html page
         window.location.href = 'index.html';

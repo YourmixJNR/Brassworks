@@ -12,6 +12,7 @@ document.getElementById('signin-form').addEventListener('submit', function (e) {
     //Check if the user object exist and the provided username/email and password match
     if (user && (user.username === usernameEmail || user.email === usernameEmail) && user.password === userPassword) {
         //Redirect to the desired page after successful sign-in
+        localStorage.setItem('authenticated', 'true');
         window.location.href = 'dashboard.html';
     } else {
         const errorMessage = document.getElementById('errorMessage');
