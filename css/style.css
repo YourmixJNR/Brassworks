@@ -373,6 +373,25 @@ header .navbar-expand-lg {
     font-weight: 700;
 }
 
+#logout-btn {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    color: #fff;
+    background: var(--Dark-Goldenrod);
+    overflow: hidden;
+    letter-spacing: 4px;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+#logout-btn:hover {
+    color: #b0842e;
+    background: #FFF;
+}
+
 /* Logo section */
 
 a.site-logo {

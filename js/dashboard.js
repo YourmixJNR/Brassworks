@@ -14,15 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //Retrieve the welcome container
         const welcomeContainer = document.getElementById('welcomeContainer');
-
-        //Check if the user object exist
-        if (user) {
-            //Display the welcome message with the username
-            welcomeContainer.textContent = 'Welcome, ' + user.username + '!';
-        } else {
-            //Redirect to the sign-in page if the user is not authenticated
-            window.location.href = 'sign-in.html';
-        }
+        welcomeContainer.textContent = 'Welcome, ' + user.username + '!';
 
         // Retrieve the logout button element
         const logoutButton = document.getElementById('logout-btn');
