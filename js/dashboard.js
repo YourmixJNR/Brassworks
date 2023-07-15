@@ -14,4 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
         //Redirect to the sign-in page if the user is not authenticated
         window.location.href = 'signin.html';
     }
-})
+
+    // Retrieve the logout button element
+    const logoutButton = document.getElementById('logout-btn');
+
+    // Add an event listener to the logout button
+    logoutButton.addEventListener('click', function() {
+        // Remove the authentication status if needed
+        localStorage.removeItem('authenticated');
+
+        // Redirect to the index.html page
+        window.location.href = 'index.html';
+    });
+});
