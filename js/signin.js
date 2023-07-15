@@ -19,3 +19,10 @@ document.getElementById('signin-form').addEventListener('submit', function (e) {
         errorMessage.textContent = 'Invalid Username/Email or Password.';
     }
 });
+
+// Add event listener for forget password link
+document.getElementById('forgetPasswordLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    // Display an alert message
+    alert("YourmixJNR_Dev 😎 is still working on this feature. \n\ Cheers 🥂");
+  });
