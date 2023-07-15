@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (authenticated !== 'true') {
         //Redirect to the sign-in page if the user is not authenticated
-        window.location.href = 'signin.html';
+        window.location.href = 'sign-in.html';
     } else {
         // The user is authenticated, proceed with displaying the dashboard
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             welcomeContainer.textContent = 'Welcome, ' + user.username + '!';
         } else {
             //Redirect to the sign-in page if the user is not authenticated
-            window.location.href = 'signin.html';
+            window.location.href = 'sign-in.html';
         }
 
         // Retrieve the logout button element
