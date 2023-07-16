@@ -2,14 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var addToCartButton = document.getElementById('add-to-cart');
   
     addToCartButton.addEventListener('click', function() {
-      var productName = document.querySelector('.product h2').innerText;
-      var productPrice = document.querySelector('.product p').innerText;
-      var quantity = document.getElementById('quantity').value;
+      var productName = document.querySelector('.drdb-bx-txt h3').innerText;
+      var productPrice = document.querySelector('.drdb-bx-txt p').innerText;
   
       var item = {
         name: productName,
         price: productPrice,
-        quantity: quantity
       };
   
       addToCart(item);
