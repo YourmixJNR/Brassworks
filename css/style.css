@@ -176,6 +176,13 @@ header .navbar-brand {
     margin-right: 0 !important;
 }
 
+header .navbar-brand .cart-count {
+    font-size: 13px;
+    padding: 2px 8px;
+    border-radius: 50px;
+    background: #f1f0ee;
+}
+
 header .navbar-expand-lg {
     display: none;
 }
