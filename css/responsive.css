@@ -22,11 +22,11 @@
 
     header .navbar-brand .cart-count {
         position: absolute;
-        font-size: 12px;
         top: 8px;
         right: 15px;
+        font-size: 12px;
+        font-weight: 600;
         padding: 0px 7px;
-        /* border: 100px; */
     }
     
     header .navbar-brand img {
