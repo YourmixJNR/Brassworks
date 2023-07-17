@@ -21,19 +21,42 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem(user.username)) {
           cartItems = JSON.parse(localStorage.getItem(user.username));
         }
-        cartItems.push(item);
+        var existingItemIndex = findItemIndex(cartItems, item.name);
+        if (existingItemIndex > -1) {
+          // Item already exists in cart, update the quantity
+          cartItems[existingItemIndex].quantity += item.quantity;
+        } else {
+          // Item doesn't exist in cart, add it
+          cartItems.push(item);
+        }
         localStorage.setItem(user.username, JSON.stringify(cartItems));
         alert('Item added to cart!');
       } else {
         if (localStorage.getItem('guestCart')) {
           cartItems = JSON.parse(localStorage.getItem('guestCart'));
         }
-        cartItems.push(item);
+        var existingItemIndex = findItemIndex(cartItems, item.name);
+        if (existingItemIndex > -1) {
+          // Item already exists in cart, update the quantity
+          cartItems[existingItemIndex].quantity += item.quantity;
+        } else {
+          // Item doesn't exist in cart, add it
+          cartItems.push(item);
+        }
         localStorage.setItem('guestCart', JSON.stringify(cartItems));
         alert('Item added to cart for guest user!');
       }
   
       updateCartCount();
+    }
+  
+    function findItemIndex(cartItems, itemName) {
+      for (var i = 0; i < cartItems.length; i++) {
+        if (cartItems[i].name === itemName) {
+          return i;
+        }
+      }
+      return -1;
     }
   
     function updateCartCount() {
@@ -52,4 +75,3 @@ document.addEventListener('DOMContentLoaded', function() {
   
     updateCartCount();
   });
-  
