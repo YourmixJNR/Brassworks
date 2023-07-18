@@ -21,4 +21,16 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 
     //Redirect to the login page
     window.location.href = 'sign-in.html'
-})
+});
+
+// Function to toggle password visibility
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById('password');
+  
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+}
+  

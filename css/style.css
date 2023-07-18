@@ -235,6 +235,10 @@ header .navbar-expand-lg {
     height: 20px;
 }
 
+.password-toggle.active {
+    background-image: url(../assets/icons/eye.png);
+  }
+
 .acct-box .ab-form .user-details label {
     position: absolute;
     top: 0;
