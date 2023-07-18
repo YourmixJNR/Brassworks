@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
     for (var i = 0; i < addToCartButtons.length; i++) {
       addToCartButtons[i].addEventListener('click', function() {
+        var productSpan = this.parentElement.querySelector('span').innerText
         var productName = this.parentElement.querySelector('h2').innerText;
         var productPrice = this.parentElement.querySelector('p').innerText;
   
         var item = {
+          span: productSpan,
           name: productName,
           price: productPrice
         };
