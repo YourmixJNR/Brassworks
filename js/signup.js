@@ -25,12 +25,16 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 
 // Function to toggle password visibility
 function togglePasswordVisibility() {
-    var passwordInput = document.getElementById('password');
+    const passwordInput = document.getElementById('password');
+    const passwordToggle = document.querySelector('.password-toggle');
   
     if (passwordInput.type === 'password') {
       passwordInput.type = 'text';
+      passwordToggle.classList.add('active');
     } else {
       passwordInput.type = 'password';
+      passwordToggle.classList.remove('active');
     }
-}
+  }
+  
   
