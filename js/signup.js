@@ -9,6 +9,15 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 
     //Perform client side validation
 
+email.addEventListener("input", (event) => {
+  if (email.validity.typeMismatch) {
+    email.setCustomValidity("I am expecting an email address!");
+  } else {
+    email.setCustomValidity("");
+  }
+});
+
+
     //Create a user object
     const user = {
         username : username,
