@@ -48,8 +48,11 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
         password : password
     };
 
+    // Update the existing users array with the new user
+    existingUsers.push(user);
+
     //Store the user object in localStorage
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('user', JSON.stringify(existingUsers));
 
     //Redirect to the login page
     window.location.href = 'sign-in.html'
