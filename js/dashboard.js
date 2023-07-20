@@ -9,12 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         // The user is authenticated, proceed with displaying the dashboard
 
-        // Retrieve the user object from localStorage
-        const user = JSON.parse(localStorage.getItem('user'));
+        // If the user is not authenticated, redirect to the sign-in page
+        if (authenticated !== 'true') {
+            window.location.href = 'sign-in.html';
+        } else {
+            // Retrieve the user object from localStorage
+            const user = JSON.parse(localStorage.getItem('user'));
 
-        //Retrieve the welcome container
-        const welcomeContainer = document.getElementById('welcomeContainer');
-        welcomeContainer.textContent = 'Welcome, ' + user.username + '!';
+            // Retrieve the welcome container
+            const welcomeContainer = document.getElementById('welcomeContainer');
+            welcomeContainer.textContent = 'Welcome, ' + user.username + '!';
+        }
 
         // Retrieve the logout button element
         const logoutButton = document.getElementById('logout-btn');
