@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       cartItemsContainer.innerText = 'Your cart is empty.';
     }
-  });
+});
   
