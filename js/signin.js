@@ -6,24 +6,20 @@ document.getElementById('signin-form').addEventListener('submit', function (e) {
     const usernameEmail = document.getElementById('usernameEmail').value;
     const userPassword = document.getElementById('userPassword').value;
 
-    // Debug: Check the values of usernameEmail and userPassword
-    console.log('Username/Email:', usernameEmail);
-    console.log('Password:', userPassword);
-
     //Retrieve the user object from localStorage
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     // Find the user with the provided username/email and password
     const user = existingUsers.find(
-        (user) => (user.username === usernameEmail || user.email === usernameEmail) && user.password === userPassword
-    );
+        (user) => (user.username === usernameEmail || user.email === usernameEmail) && user.password === userPassword);
 
     // Debug: Check the existingUsers array
     console.log('Existing Users Array:', existingUsers);
 
     if (user) {
         // Redirect to the desired page after successful sign-in
-        localStorage.setItem('authenticated', 'true');
+        localStorage.setItem('authenticated', usernameEmail);
+        console.log('Authenticated Username:', usernameEmail);
         window.location.href = 'dashboard.html';
       } else {
         const errorMessage = document.getElementById('errorMessage');
