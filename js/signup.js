@@ -9,7 +9,7 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     const confirmPassword = document.getElementById('confirmPassword').value;
 
     // Retrieve existing user data from localStorage
-    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    // const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
     // Check if the username or email already exists
     const usernameExists = existingUsers.some((user) => user.username === username);
@@ -47,21 +47,24 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 
     //Perform client side validation
 
-    //Create a user object
+    // Retrieve existing user data from localStorage
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Create a user object
     const user = {
-        username : username,
-        email : email,
-        password : password
+      username: username,
+      email: email,
+      password: password,
     };
 
-    // Update the existing users array with the new user
+    // Add the new user to the existingUsers array
     existingUsers.push(user);
 
-    //Store the user object in localStorage
-    localStorage.setItem('user', JSON.stringify(existingUsers));
+    // Save the updated existingUsers array back to localStorage
+    localStorage.setItem('users', JSON.stringify(existingUsers));
 
-    //Redirect to the login page
-    window.location.href = 'sign-in.html'
+    // Redirect to the login page
+    window.location.href = 'sign-in.html';
 });
 
 // Function to toggle password visibility

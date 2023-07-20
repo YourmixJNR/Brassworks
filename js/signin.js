@@ -6,11 +6,25 @@ document.getElementById('signin-form').addEventListener('submit', function (e) {
     const usernameEmail = document.getElementById('usernameEmail').value;
     const userPassword = document.getElementById('userPassword').value;
 
-    //Retrieve the user object from localStorage
-    const user = JSON.parse(localStorage.getItem('user'));
+    // Debug: Check the values of usernameEmail and userPassword
+    console.log('Username/Email:', usernameEmail);
+    console.log('Password:', userPassword);
 
-    //Check if the user object exist and the provided username/email and password match
-    if (user && (user.username === usernameEmail || user.email === usernameEmail) && user.password === userPassword) {
+    //Retrieve the user object from localStorage
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Debug: Check the existingUsers array
+    console.log('Existing Users Array:', existingUsers);
+
+    // Find the user with the provided username/email
+    const user = existingUsers.find((user) => user.username === usernameEmail || user.email === usernameEmail);
+    // Debug: Check the user object
+    console.log('User Object:', user);
+
+    // Check if the user object exists and the provided password matches
+    if (user && user.password === userPassword) {
+        // Set authentication status to true
+        localStorage.setItem('authenticated', 'true');
         //Redirect to the desired page after successful sign-in
         localStorage.setItem('authenticated', 'true');
         window.location.href = 'dashboard.html';
