@@ -39,4 +39,4 @@ document.getElementById('forgetPasswordLink').addEventListener('click', function
     e.preventDefault();
     // Display an alert message
     alert("YourmixJNR_Dev 😎 is still working on this feature. \n\Cheers 🥂");
-  });
+});

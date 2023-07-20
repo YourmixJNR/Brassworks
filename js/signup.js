@@ -8,16 +8,35 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
 
+    // Retrieve existing user data from localStorage
+    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Check if the username or email already exists
+    const usernameExists = existingUsers.some((user) => user.username === username);
+    const emailExists = existingUsers.some((user) => user.email === email);
+
+    // Perform client-side validation
+    if (usernameExists) {
+      alert('Username is already in use. Please choose a different username.');
+      return;
+    }
+
+    if (emailExists) {
+      alert('Email is already in use. Please use a different email.');
+      return;
+    }
+
     const passwordMatchMessage = document.getElementById('passwordMatchMessage');
     passwordMatchMessage.textContent ="";
 
     if (password !== confirmPassword) {
       passwordMatchMessage.textContent = "Password doesn't match";
-      return
+      return;
     }
 
-    if (password.length < 6) {
-      passwordMatchMessage.textContent = "Password must be at least 6 char";
+    if (password.length < 3) {
+      passwordMatchMessage.textContent = "Password must be at least 3 character";
+      return;
     }
 
     //Perform client side validation
