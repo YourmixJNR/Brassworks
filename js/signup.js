@@ -16,13 +16,19 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     const emailExists = existingUsers.some((user) => user.email === email);
 
     // Perform client-side validation
+
+    const usernameError = document.getElementById('usernameError');
+    const emailError = document.getElementById('emailError');
+
     if (usernameExists) {
-      alert('Username is already in use. Please choose a different username.');
+      usernameError.textContent = "Username is already in use. Please choose a different username.";
+      emailError.textContent = ""; // Reset email error message
       return;
     }
 
     if (emailExists) {
-      alert('Email is already in use. Please use a different email.');
+      emailError.textContent = "Email is already in use. Please choose a different username.";
+      usernameError.textContent = ""; // Reset username error message
       return;
     }
 

@@ -384,10 +384,10 @@ header .navbar-expand-lg {
     color: var(--Dark-Goldenrod);
 }
 
-#errorMessage, #passwordMatchMessage {
+#errorMessage, #passwordMatchMessage, .mutipleError {
     color: red;
     margin-top: -20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /* Dashboard section */
