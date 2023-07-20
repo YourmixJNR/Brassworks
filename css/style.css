@@ -193,7 +193,7 @@ header .navbar-expand-lg {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 500px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: #f1f0ee;
@@ -384,7 +384,7 @@ header .navbar-expand-lg {
     color: var(--Dark-Goldenrod);
 }
 
-#errorMessage {
+#errorMessage, #passwordMatchMessage {
     color: red;
     margin-top: -20px;
     margin-bottom: 10px;

@@ -44,19 +44,27 @@
 
                 <div class="user-details">
                     <input id="username" type="text" name="" required>
-                    <label for="">Username</label>
+                    <label for="username">Username</label>
                 </div>
 
                 <div class="user-details">
                     <input id="email" type="email" name="" required>
-                    <label for="">Email</label>
+                    <label for="email">Email</label>
                 </div>
 
                 <div class="user-details">
                     <input id="password" type="password" name="" required>
-                    <span class="password-toggle" onclick="togglePasswordVisibility() "></span>
-                    <label for="">Password</label>
+                    <span class="password-toggle" onclick="togglePasswordVisibility('password')"></span>
+                    <label for="password">Password</label>
                 </div>
+
+                <div class="user-details">
+                    <input id="confirmPassword" type="password" name="" required>
+                    <span class="password-toggle" onclick="togglePasswordVisibility('confirmPassword')"></span>
+                    <label for="confirmPassword">Confirm Password</label>
+                </div>
+
+                <div id="passwordMatchMessage"></div>
 
                 <button class="submit-btn">
                     <span></span>

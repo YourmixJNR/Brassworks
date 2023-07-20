@@ -6,6 +6,19 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     const username = document.getElementById('username').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    const passwordMatchMessage = document.getElementById('passwordMatchMessage');
+    passwordMatchMessage.textContent ="";
+
+    if (password !== confirmPassword) {
+      passwordMatchMessage.textContent = "Password doesn't match";
+      return
+    }
+
+    if (password.length < 6) {
+      passwordMatchMessage.textContent = "Password must be at least 6 char";
+    }
 
     //Perform client side validation
 
@@ -24,17 +37,18 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 });
 
 // Function to toggle password visibility
-function togglePasswordVisibility() {
-    const passwordInput = document.getElementById('password');
-    const passwordToggle = document.querySelector('.password-toggle');
-  
-    if (passwordInput.type === 'password') {
-      passwordInput.type = 'text';
-      passwordToggle.classList.add('active');
-    } else {
-      passwordInput.type = 'password';
-      passwordToggle.classList.remove('active');
-    }
+function togglePasswordVisibility(inputId) {
+  const passwordInput = document.getElementById(inputId);
+  const passwordToggle = passwordInput.nextElementSibling;
+
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    passwordToggle.classList.add('active');
+  } else {
+    passwordInput.type = 'password';
+    passwordToggle.classList.remove('active');
+    console.log('Password is hidden.');
   }
-  
+}
+
   
