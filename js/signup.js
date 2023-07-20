@@ -47,7 +47,6 @@ function togglePasswordVisibility(inputId) {
   } else {
     passwordInput.type = 'password';
     passwordToggle.classList.remove('active');
-    console.log('Password is hidden.');
   }
 }
 

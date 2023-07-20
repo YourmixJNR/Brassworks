@@ -20,6 +20,20 @@ document.getElementById('signin-form').addEventListener('submit', function (e) {
     }
 });
 
+//Function to toggle userPassword Visibility
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('userPassword');
+    const passwordToggle = document.querySelector('.password-toggle');
+
+    if (passwordInput.type == 'password') {
+        passwordInput.type ='text';
+        passwordToggle.classList.add('active');
+    } else {
+        passwordInput.type = 'password';
+        passwordToggle.classList.remove('active');
+    }
+}
+  
 // Add event listener for forget password link
 document.getElementById('forgetPasswordLink').addEventListener('click', function(e) {
     e.preventDefault();
