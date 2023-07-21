@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     addToCartButtons[i].addEventListener('click', function() {
       var productSpan = this.parentElement.querySelector('span').innerText;
       var productName = this.parentElement.querySelector('h3').innerText;
-      var productPrice = this.parentElement.querySelector('p').innerText;
+      var productPrice = this.parentElement.querySelector('.pri-edi').innerText;
 
       var item = {
         span: productSpan,
@@ -19,47 +19,35 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function addToCart(item) {
-    var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
     var user = JSON.parse(localStorage.getItem('user'));
     var cartItems = [];
 
-    if (user) {
-      var currentUser = existingUsers.find(function(u) {
-        return u.username === user.username;
-      });
-
-      if (currentUser && currentUser.cartItems) {
-        cartItems = currentUser.cartItems;
+    if (user && user.username) {
+      // User is logged in
+      if (localStorage.getItem(user.username)) {
+        cartItems = JSON.parse(localStorage.getItem(user.username));
       }
-
-      var existingItemIndex = findItemIndex(cartItems, item.name);
-      if (existingItemIndex > -1) {
-        // Item already exists in cart, update the quantity
-        cartItems[existingItemIndex].quantity += 1;
-      } else {
-        // Item doesn't exist in cart, add it
-        item.quantity = 1;
-        cartItems.push(item);
-      }
-
-      currentUser.cartItems = cartItems;
-      localStorage.setItem('users', JSON.stringify(existingUsers));
-      alert('Item added to cart for logged-in user!');
     } else {
+      // Guest user
       if (localStorage.getItem('guestCart')) {
         cartItems = JSON.parse(localStorage.getItem('guestCart'));
       }
+    }
 
-      var existingItemIndex = findItemIndex(cartItems, item.name);
-      if (existingItemIndex > -1) {
-        // Item already exists in cart, update the quantity
-        cartItems[existingItemIndex].quantity += 1;
-      } else {
-        // Item doesn't exist in cart, add it
-        item.quantity = 1;
-        cartItems.push(item);
-      }
+    var existingItemIndex = findItemIndex(cartItems, item.name);
+    if (existingItemIndex > -1) {
+      // Item already exists in cart, update the quantity
+      cartItems[existingItemIndex].quantity += 1;
+    } else {
+      // Item doesn't exist in cart, add it
+      item.quantity = 1;
+      cartItems.push(item);
+    }
 
+    if (user && user.username) {
+      localStorage.setItem(user.username, JSON.stringify(cartItems));
+      alert('Item added to cart for logged-in user!');
+    } else {
       localStorage.setItem('guestCart', JSON.stringify(cartItems));
       alert('Item added to cart for guest user!');
     }
@@ -77,17 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function updateCartCount() {
-    var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
     var user = JSON.parse(localStorage.getItem('user'));
     var cartItems = [];
 
-    if (user) {
-      var currentUser = existingUsers.find(function(u) {
-        return u.username === user.username;
-      });
-
-      if (currentUser && currentUser.cartItems) {
-        cartItems = currentUser.cartItems;
+    if (user && user.username) {
+      if (localStorage.getItem(user.username)) {
+        cartItems = JSON.parse(localStorage.getItem(user.username));
       }
     } else if (localStorage.getItem('guestCart')) {
       cartItems = JSON.parse(localStorage.getItem('guestCart'));
