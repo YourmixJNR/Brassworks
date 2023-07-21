@@ -1,86 +1,102 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var addToCartButtons = document.querySelectorAll('.add-to-cart');
-    var cartCountElements = document.querySelectorAll('.cart-count');
-  
-    for (var i = 0; i < addToCartButtons.length; i++) {
-      addToCartButtons[i].addEventListener('click', function() {
-        var productSpan = this.parentElement.querySelector('span').innerText
-        var productName = this.parentElement.querySelector('h3').innerText;
-        var productPrice = this.parentElement.querySelector('p').innerText;
-  
-        var item = {
-          span: productSpan,
-          name: productName,
-          price: productPrice
-        };
-  
-        addToCart(item);
+  var addToCartButtons = document.querySelectorAll('.add-to-cart');
+  var cartCountElements = document.querySelectorAll('.cart-count');
+
+  for (var i = 0; i < addToCartButtons.length; i++) {
+    addToCartButtons[i].addEventListener('click', function() {
+      var productSpan = this.parentElement.querySelector('span').innerText;
+      var productName = this.parentElement.querySelector('h3').innerText;
+      var productPrice = this.parentElement.querySelector('p').innerText;
+
+      var item = {
+        span: productSpan,
+        name: productName,
+        price: productPrice
+      };
+
+      addToCart(item);
+    });
+  }
+
+  function addToCart(item) {
+    var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    var user = JSON.parse(localStorage.getItem('user'));
+    var cartItems = [];
+
+    if (user) {
+      var currentUser = existingUsers.find(function(u) {
+        return u.username === user.username;
       });
-    }
-  
-    function addToCart(item) {
-      var user = JSON.parse(localStorage.getItem('user'));
-      var cartItems = [];
-  
-      if (user) {
-        if (localStorage.getItem(user.username)) {
-          cartItems = JSON.parse(localStorage.getItem(user.username));
-        }
-        var existingItemIndex = findItemIndex(cartItems, item.name);
-        if (existingItemIndex > -1) {
-          // Item already exists in cart, update the quantity
-          cartItems[existingItemIndex].quantity += 1;
-        } else {
-          // Item doesn't exist in cart, add it
-          item.quantity = 1;
-          cartItems.push(item);
-        }
-        localStorage.setItem(user.username, JSON.stringify(cartItems));
-        alert('Item added to cart!');
+
+      if (currentUser && currentUser.cartItems) {
+        cartItems = currentUser.cartItems;
+      }
+
+      var existingItemIndex = findItemIndex(cartItems, item.name);
+      if (existingItemIndex > -1) {
+        // Item already exists in cart, update the quantity
+        cartItems[existingItemIndex].quantity += 1;
       } else {
-        if (localStorage.getItem('guestCart')) {
-          cartItems = JSON.parse(localStorage.getItem('guestCart'));
-        }
-        var existingItemIndex = findItemIndex(cartItems, item.name);
-        if (existingItemIndex > -1) {
-          // Item already exists in cart, update the quantity
-          cartItems[existingItemIndex].quantity += 1;
-        } else {
-          // Item doesn't exist in cart, add it
-          item.quantity = 1;
-          cartItems.push(item);
-        }
-        localStorage.setItem('guestCart', JSON.stringify(cartItems));
-        alert('Item added to cart for guest user!');
+        // Item doesn't exist in cart, add it
+        item.quantity = 1;
+        cartItems.push(item);
       }
-  
-      updateCartCount();
-    }
-  
-    function findItemIndex(cartItems, itemName) {
-      for (var i = 0; i < cartItems.length; i++) {
-        if (cartItems[i].name === itemName) {
-          return i;
-        }
-      }
-      return -1;
-    }
-  
-    function updateCartCount() {
-      var user = JSON.parse(localStorage.getItem('user'));
-      var cartItems = [];
-  
-      if (user && localStorage.getItem(user.username)) {
-        cartItems = JSON.parse(localStorage.getItem(user.username));
-      } else if (!user && localStorage.getItem('guestCart')) {
+
+      currentUser.cartItems = cartItems;
+      localStorage.setItem('users', JSON.stringify(existingUsers));
+      alert('Item added to cart for logged-in user!');
+    } else {
+      if (localStorage.getItem('guestCart')) {
         cartItems = JSON.parse(localStorage.getItem('guestCart'));
       }
-  
-      for (var i = 0; i < cartCountElements.length; i++) {
-        cartCountElements[i].innerText = cartItems.length.toString();
+
+      var existingItemIndex = findItemIndex(cartItems, item.name);
+      if (existingItemIndex > -1) {
+        // Item already exists in cart, update the quantity
+        cartItems[existingItemIndex].quantity += 1;
+      } else {
+        // Item doesn't exist in cart, add it
+        item.quantity = 1;
+        cartItems.push(item);
+      }
+
+      localStorage.setItem('guestCart', JSON.stringify(cartItems));
+      alert('Item added to cart for guest user!');
+    }
+
+    updateCartCount();
+  }
+
+  function findItemIndex(cartItems, itemName) {
+    for (var i = 0; i < cartItems.length; i++) {
+      if (cartItems[i].name === itemName) {
+        return i;
       }
     }
-  
-    updateCartCount();
-  });
-  
+    return -1;
+  }
+
+  function updateCartCount() {
+    var existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+    var user = JSON.parse(localStorage.getItem('user'));
+    var cartItems = [];
+
+    if (user) {
+      var currentUser = existingUsers.find(function(u) {
+        return u.username === user.username;
+      });
+
+      if (currentUser && currentUser.cartItems) {
+        cartItems = currentUser.cartItems;
+      }
+    } else if (localStorage.getItem('guestCart')) {
+      cartItems = JSON.parse(localStorage.getItem('guestCart'));
+    }
+
+    for (var i = 0; i < cartCountElements.length; i++) {
+      cartCountElements[i].innerText = cartItems.length.toString();
+    }
+  }
+
+  updateCartCount();
+});
