@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var addToCartButtons = document.querySelectorAll('.add-to-cart');
   var cartCountElements = document.querySelectorAll('.cart-count');
+  var logoutButton = document.getElementById('logout');
 
   for (var i = 0; i < addToCartButtons.length; i++) {
     addToCartButtons[i].addEventListener('click', function() {
@@ -17,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
       addToCart(item);
     });
   }
+
+  logoutButton.addEventListener('click', function() {
+    logout();
+  });
 
   function addToCart(item) {
     var user = JSON.parse(localStorage.getItem('user'));
@@ -79,6 +84,19 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < cartCountElements.length; i++) {
       cartCountElements[i].innerText = cartItems.length.toString();
     }
+  }
+
+  function logout() {
+    // Clear the cart and the current user from localStorage
+    var user = JSON.parse(localStorage.getItem('user'));
+    if (user && user.username) {
+      localStorage.removeItem(user.username);
+    } else {
+      localStorage.removeItem('guestCart');
+    }
+    localStorage.removeItem('user');
+    alert('Logged out successfully!');
+    updateCartCount();
   }
 
   updateCartCount();
