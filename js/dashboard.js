@@ -16,9 +16,12 @@ document.addEventListener('DOMContentLoaded', function () {
         (user) => user.username === authenticatedData || user.email === authenticatedData
       );
   
-      // Display only the username in the welcome message
+      // Change only the first letter of the username to capital and the rest to lowercase
+      const formattedUsername = user.username.charAt(0).toUpperCase() + user.username.slice(1).toLowerCase();
+
+      // Display the formatted username in the welcome message
       const welcomeContainer = document.getElementById('welcomeContainer');
-      welcomeContainer.textContent = 'Welcome, ' + user.username + '!';
+      welcomeContainer.textContent = 'Welcome, ' + formattedUsername + '!';
   
       // Retrieve the logout button element
       const logoutButton = document.getElementById('logout-btn');
