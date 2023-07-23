@@ -19,29 +19,33 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 
     const usernameError = document.getElementById('usernameError');
     const emailError = document.getElementById('emailError');
+    const passwordMatchMessage = document.getElementById('passwordMatchMessage');
 
     if (usernameExists) {
       usernameError.textContent = "Username is already in use. Please choose a different username.";
       emailError.textContent = ""; // Reset email error message
+      passwordMatchMessage.textContent ="";
       return;
     }
 
     if (emailExists) {
       emailError.textContent = "Email is already in use. Please choose a different username.";
       usernameError.textContent = ""; // Reset username error message
+      passwordMatchMessage.textContent ="";
       return;
     }
-
-    const passwordMatchMessage = document.getElementById('passwordMatchMessage');
-    passwordMatchMessage.textContent ="";
 
     if (password !== confirmPassword) {
       passwordMatchMessage.textContent = "Password doesn't match";
+      emailError.textContent = ""; // Reset email error message
+      usernameError.textContent = ""; // Reset username error message
       return;
     }
 
-    if (password.length < 3) {
+    if (password.length < 4) {
       passwordMatchMessage.textContent = "Password must be at least 3 character";
+      emailError.textContent = ""; // Reset email error message
+      usernameError.textContent = ""; // Reset username error message
       return;
     }
 
