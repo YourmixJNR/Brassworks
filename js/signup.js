@@ -1,6 +1,6 @@
 // Signup.js
-document.getElementById('signup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
     //Retrieve form input
     const username = document.getElementById('username').value;
