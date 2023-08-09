@@ -27,17 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var user = JSON.parse(localStorage.getItem('user'));
     var cartItems = [];
 
-    if (user && user.username) {
-      // User is logged in
-      if (localStorage.getItem(user.username)) {
-        cartItems = JSON.parse(localStorage.getItem(user.username));
-      }
-    } else {
-      // Guest user
-      if (localStorage.getItem('guestCart')) {
-        cartItems = JSON.parse(localStorage.getItem('guestCart'));
-      }
-    }
+    // if (user && user.username) {
+    //   // User is logged in
+    //   if (localStorage.getItem(user.username)) {
+    //     cartItems = JSON.parse(localStorage.getItem(user.username));
+    //   }
+    // } else {
+    //   // Guest user
+    //   if (localStorage.getItem('guestCart')) {
+    //     cartItems = JSON.parse(localStorage.getItem('guestCart'));
+    //   }
+    // }
 
     var existingItemIndex = findItemIndex(cartItems, item.name);
     if (existingItemIndex > -1) {
