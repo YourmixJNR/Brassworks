@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     if (!authenticatedData) {
       // Redirect to the sign-in page if the user is not authenticated
-      window.location.href = 'sign-in.html';
+      window.location.href = 'sign-up.html';
     } else {
       // The user is authenticated, proceed with displaying the dashboard
   
