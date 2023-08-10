@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (user && user.username) {
       localStorage.setItem(user.username, JSON.stringify(cartItems));
-      // alert('Item added to cart for logged-in user!');
+      alert('Item added to cart for logged-in user!');
     } else {
       localStorage.setItem('guestCart', JSON.stringify(cartItems));
       alert('Item added to cart for guest user!');
