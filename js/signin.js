@@ -1,5 +1,5 @@
 //Signin.js
-document.getElementById('signin-form').addEventListener('submit', function (e) {
+document.getElementById('signin-form').addEventListener('submit', (e) => {
     e.preventDefault();
 
     //Retrieve form input
@@ -42,7 +42,7 @@ function togglePasswordVisibility() {
 }
   
 // Add event listener for forget password link
-document.getElementById('forgetPasswordLink').addEventListener('click', function(e) {
+document.getElementById('forgetPasswordLink').addEventListener('click', (e) => {
     e.preventDefault();
     // Display an alert message
     alert("YourmixJNR_Dev 😎 is still working on this feature. \n\Cheers 🥂");
