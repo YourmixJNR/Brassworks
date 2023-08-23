@@ -1,8 +1,1 @@
-# Brassworks
-Brassworks Annex Website
-
-Brassworks Annex Website is made with CMS
-
-SCOPE OF THE PROJECT
-
-Change Brassworks website from CMS to code.
+The Brasswork Website Reconstruction project involves rewriting the existing website, originally built using a CMS, from scratch using HTML, CSS, and JavaScript. The goal is to transition the website into a custom-coded version to provide more control and flexibility over its design and functionality.
